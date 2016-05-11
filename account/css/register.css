@@ -1,0 +1,16 @@
+#main #content #content-reg-btn{
+    margin-top: 10px;
+    width: 365px;
+    height: 45px;
+    background-color: coral;
+    padding: 0px;
+    border: none;
+    color: white;
+    font-size: 15px;
+}
+select{
+    width: 365px;
+    height: 45px;
+    padding-left: 10px;
+    font-size: 18px;
+}

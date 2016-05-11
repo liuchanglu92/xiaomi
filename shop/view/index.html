@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米官网</title>
+    <link  type="text/css" rel="stylesheet" href="../css/style.css">
+    <style>
+        html{
+            font-size: 100%;
+        }
+        body{
+            margin: 0px;
+            display: block;
+        }
+        html,button,input,select,textarea{
+            font-family: sans-serif;
+        }
+        head{
+            display: none;
+        }
+        body{
+            font: 14px / 1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+            color: #333;
+            background-color: #fff;
+            min-width: 1226px;
+        }
+        div{
+            display: block;
+        }
+        form{
+            margin: 0px;
+        }
+        .container:after ,.container:before{
+            display: table;
+            content: "";
+        }
+        .container:after{
+            clear: both;
+        }
+        .container:after ,.container:before{
+            display: table;
+            content: "";
+        }
+        .container{
+            width: 1226px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .site-topbar{
+            position: relative;
+            background: black;
+            font-size: 14px;
+            color: #b0b0b0;
+            height: 40px;
+            z-index: 30;
+        }
+        .site-topbar a{
+            color:#b0b0b0;
+            text-decoration: none;
+        }
+        .site-topbar a:hover {
+            color: white;
+        }
+        .site-topbar .topbar-nav{
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+        }
+        .site-topbar .sep{
+            margin: 8px;
+        }
+        .site-topbar .topbar-info{
+            float: right;
+            height: 40px;
+            line-height: 40px;
+            overflow: hidden;
+        }
+        .site-header{
+            position: relative;
+            font-size: 18px;
+            height: 80px;
+            display: inline;
+        }
+        .site-header .header-logo{
+            position: relative;
+            float: left;
+            width: 62px;
+            margin-top: 22px;
+        }
+        .site-header .container .logo{
+            position: relative;
+            display: block;
+            width: 55px;
+            height: 55px;
+            background: url("../images/logo-xiaomi.png") no-repeat 50% 50% ;
+        }
+        .site-header .container .dooble{
+            left: 75px;
+            width: 170px;
+            margin-top: 17px;
+            position: relative;
+
+        }
+        .site-header .container .dooble .link-block{
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 62px;
+            background: url("../images/logo-link-block.png") no-repeat  ;
+        }
+        .site-header .container .header-nav {
+            left: 180px;
+            width: 720px;
+            height:62px;
+            position: relative;
+        }
+        .site-header .container .header-nav .nav-list{
+            padding-top: 15px;
+            list-style-type: none;
+        }
+        .site-header .container .header-nav .nav-list li{
+            font-size: 16px;
+            display: inline;
+            padding: 12px 0 0 30px;
+        }
+        .site-header .container .header-nav .nav-list li a{
+            text-decoration: none;
+            color: black;
+        }
+        .site-header .container .header-nav .nav-list li a:hover{
+            color: orangered;
+        }
+        .site-header .container .header-serach{
+
+            display: inline;
+            width: 320px;
+            height:62px;
+            top: 22px;
+            position: relative;
+        }
+        .site-header .container .header-serach .search-form{
+            position: relative;
+            top: -60px;;
+            float: right;
+            width: 320px;
+            height: 50px;
+        }
+        .site-header .search-text{
+            position: absolute;
+            line-height: 40px;
+            width: 267px;
+            height: 45px;
+        }
+        .site-header .search-text:hover>ul{
+          display: block;
+        }
+        .site-header .search-btn{
+            float: right;
+            right: 20px;
+            width: 55px;
+            line-height: 40px;
+            background: url("../images/pic-search-unactive.png") no-repeat;
+        } 
+        .site-header .search-hot-words{
+            float: right;
+            position: relative;
+            font-size: 16px;
+            text-align: left;
+            padding-top: 8px;
+            margin: 3px;
+            width: 130px;
+        }
+        .site-header .search-hot-words a{
+            background: #b0b0b0;
+            text-decoration: none;
+            margin: 1px;
+        }
+        .site-header .search-hot-words a:hover{
+            background: orangered;
+            text-decoration: none;
+            color: white;
+            margin: 1px;
+        }
+        .header-serach .keyword-list{
+            position: absolute;
+            margin-top: 45px;
+            border: solid 1px;
+            width: 265px;
+        }
+        .header-serach .keyword-list ul{
+            margin: 2px auto;
+            font-size: 14px;
+
+        }
+        .header-serach .keyword-list li{
+            list-style-type: none;
+            margin-left: -22px;
+        }
+        .home-hero-container{
+            width: 1226px;
+            height: 350px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .big-banner{
+            margin-left: 250px;
+            border: solid 1px;
+            height: 350px;
+            width: 973px;
+        }
+        .big-banner img{
+            border: 0px;
+        }
+        .home-hero-container .home-hero-sub{
+            margin-top: 10px;
+            height: 200px;
+        }
+        .home-hero-container .home-hero-sub .sub-left{
+            float: left;
+            height: 180px;
+            width: 250px;
+            background-color:#5f5750;
+            margin-top: 5px;
+        }
+        .home-hero-container .home-hero-sub .sub-left tr{
+            height: 98px;
+            width: 80px;
+        }
+        .home-hero-container .home-hero-sub .sub-left td{
+            border-right: solid 1px;
+            border-bottom: solid 1px;
+            color: white;
+            width: 81px;
+            text-align: center;
+        }
+        .home-hero-container .home-hero-sub .sub-left td a{
+            color: wheat;
+            text-decoration: none;
+        }
+        .home-hero-container .home-hero-sub .sub-left td a:hover{
+            color: white;
+        }
+        .home-hero-container .home-hero-sub .sub-right{
+            position: relative;
+            float: right;
+            height: 200px;
+            width: 950px;
+
+        }
+        .home-hero-container .home-hero-sub .sub-right img{
+            height: 180px;
+            width: 300px;
+            padding: 5px;
+        }
+        .J-homeStar{
+            height: 400px;
+        }
+        .title{
+            margin: 20px 0 5px 0px;
+            position: relative;
+        }
+        .more{
+            font-size: 18px;
+            position: absolute;
+            top: 2px;
+            right: 10px;
+        }
+        .J-homeStar .box-hd{
+            height: 365px;
+
+        }
+        .J-homeStar .box-hd ul{
+            list-style-type: none;
+            height: 350px;
+            display: block;
+            margin: 0px auto;
+            padding: 0px;
+        }
+        .J-homeStar .box-hd ul li{
+           width: 224px;
+            margin: 10px;
+           float: left;
+            text-align: center;
+            height: 300px;
+           background-color: #fafafa;
+            border-top-width: 1px;
+            border-top-style: solid;
+            padding-top: 40px;
+        }
+        .J-homeStar .box-hd .rainbow-item-1{
+            border-top-color: coral;
+        }
+        .J-homeStar .box-hd .rainbow-item-2{
+            border-top-color: chartreuse;
+        }
+        .J-homeStar .box-hd .rainbow-item-3{
+            border-top-color: darkviolet;
+        }
+        .J-homeStar .box-hd .rainbow-item-4{
+            border-top-color: gold;
+        }
+        .J-homeStar .box-hd .rainbow-item-5{
+            border-top-color: cyan;
+        }
+        .page-main{
+            float: left;
+            width: 100%;
+            height: 800px;
+            background-color: #f5f5f5;
+
+        }
+        .page-main .container{
+            width: 1226px;
+            margin-right: auto;
+            margin-left: auto;
+
+        }
+        .page-main .brick-item{
+            float: left;
+            width: 234px;
+            height: 613px;
+
+        }
+        .page-main .brick-list{
+            margin: 0px;
+            padding: 0px;
+            float: right;
+            width: 970px;
+            height: 613px;
+
+        }
+        .page-main .brick-list ul{
+            list-style-type: none;
+
+            display: block;
+            margin: 0px auto;
+            padding: 0px;
+        }
+        .page-main .brick-list ul li{
+
+            width: 222px;
+            margin-right: 20px;
+            margin-bottom: 30px;
+            float: left;
+            text-align: center;
+            height: 252px;
+            background-color: white;
+            padding-top: 40px;
+        }
+        .page-main .brick-list-item-1{
+            background-color: chartreuse;
+            width: 65px;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 79px;
+        }
+        .page-main .brick-list-item-2{
+            background-color: red;
+            width: 65px;
+            position: absolute;
+            margin-top: -40px;
+            margin-left: 79px;
+        }
+        .page-main .brick-list img{
+            width: 160px;
+            height: 160px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="site-topbar">
+        <div class="container">
+            <div class="topbar-nav">
+                <a href="/">小米网</a>
+                <span class="sep">|</span>
+                <a href="/">MIUI</a>
+                <span class="sep">|</span>
+                <a href="/">米聊</a>
+                <span class="sep">|</span>
+                <a href="/">游戏</a>
+            </div>
+            <div class="topbar-info">
+                <a href="/">登录</a>
+                <span class="sep">|</span>
+                <a href="/">注册</a>
+            </div>
+        </div>
+    </div>
+    <div class="site-header" >
+        <div class="container">
+            <div class="header-logo">
+                <a class="logo" href="/"></a>
+                <a class="link-block" href="/"></a>
+            </div>
+            <div class="dooble">
+                <a class="link-block" href="/"></a>
+            </div>
+            <div class="header-nav">
+                <ul class="nav-list">
+                    <li><a href="/">小米网</a></li>
+                    <li><a href="/">MIUI</a></li>
+                    <li><a href="/">米聊</a></li>
+                    <li><a href="/">游戏</a></li>
+                    <li><a href="/">小米网</a></li>
+                    <li><a href="/">MIUI</a></li>
+                    <li><a href="/">米聊</a></li>
+                    <li><a href="/">游戏</a></li>
+                </ul>
+            </div>
+            <div class="header-serach">
+                <form id="J_searchFrom" class="search-form" action="" method="get">
+                    <input id="search"  class="search-text" type="search" >
+                    <input class="search-btn" type="submit" value="" >
+                    <div class="search-hot-words">
+                        <a href="/">小米手机4</a>
+                        <a href="/">平衡车</a>
+                    </div>
+                    <div id="J_keywordList" class="keyword-list">
+                        <ul class="result-list">
+                            <li>小米手机</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="home-hero-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fa fa-dashboard push"></i>Dashboard<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                </li>
+                <li><a href="#"><i class="fa fa-user push"></i>Users<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li><a href="#">Add User<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">Manage Users<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-cog push"></i>SDFDS<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li><a href="#">Dashboard Settings<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">Profile Settings<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">Manage Menu<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                        <li><a href="#">User Profiles<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul></li>
+                <li><a href="#"><i class="fa fa-picture-o push"></i>appearance<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li><a href="#">Change Theme<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                        </li>
+                        <li><a href="#">Theme Options<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-file push"></i>Information<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                    <ul class="sub-menu">
+                        <li><a href="#">Latest News<i class="fa fa-angle-right"></i></a><span class="hover"></span>
+                        </li>
+                        <li><a href="#">Recent Articles<i class="fa fa-angle-right"></i></a><span class="hover"></span></li>
+                    </ul>
+                </li>
+        </div>
+        <div class="big-banner">
+            <a href="#" ><img  style="height: 350px;width: 973px;" src="../images/big-banner.jpg"/></a>
+        </div>
+        <div class="home-hero-sub">
+            <div class="sub-left">
+                <table>
+                    <tr >
+                        <td><a href="#">电信专场</a></td>
+                        <td><a href="#">企业团购</a></td>
+                        <td><a href="#">官方产品</a></td>
+                    </tr>
+                    <tr >
+                        <td><a href="#">小米移动</a></td>
+                        <td><a href="#">以旧换新</a></td>
+                        <td><a href="#">话费充值</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="sub-right">
+                <img src="../images/banner-sub1.jpg"/>
+                <img src="../images/banner-sub2.jpg"/>
+                <img src="../images/banner-sub3.jpg"/>
+            </div>
+        </div>
+        <div class="J-homeStar">
+            <div class="xm-plain-box">
+                <div class="title">
+                    <h2>小米明星产品</h2>
+                    <div class="more">
+                        <   >
+                    </div>
+                </div>
+                <div class="box-hd">
+                    <ul>
+                        <li class="rainbow-item-1">
+                            <a href="#"><img src="../images/star-1.jpg"/></a>
+                            <h3>小米空气净化器2</h3>
+                            <p class="desc">10分钟，空气焕然一新</p>
+                            <p class="price">299元</p>
+                        </li>
+                        <li class="rainbow-item-2">
+                            <a href="#"><img src="../images/star-1.jpg"/></a>
+                            <h3>小米空气净化器2</h3>
+                            <p class="desc">10分钟，空气焕然一新</p>
+                            <p class="price">299元</p>
+                        </li>
+                        <li class="rainbow-item-3">
+                            <a href="#"><img src="../images/star-1.jpg"/></a>
+                            <h3>小米空气净化器2</h3>
+                            <p class="desc">10分钟，空气焕然一新</p>
+                            <p class="price">299元</p>
+                        </li>
+                        <li class="rainbow-item-4">
+                            <a href="#"><img src="../images/star-1.jpg"/></a>
+                            <h3>小米空气净化器2</h3>
+                            <p class="desc">10分钟，空气焕然一新</p>
+                            <p class="price">299元</p>
+                        </li>
+                        <li class="rainbow-item-5">
+                            <a href="#"><img src="../images/star-1.jpg"/></a>
+                            <h3>小米空气净化器2</h3>
+                            <p class="desc">10分钟，空气焕然一新</p>
+                            <p class="price">299元</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-main">
+        <div class="container">
+            <div class="title">
+                <h2>智能硬件</h2>
+                <div class="more">
+                  查看全部
+                </div>
+            </div>
+            <div class="brick-item">
+                <a href="#"><img src="../images/banner-brick-item.jpg"></a>
+            </div>
+            <div class="brick-list">
+                <ul>
+                    <li >
+                        <div class="brick-list-item-1">新品</div>
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li >
+                        <div class="brick-list-item-2">享九折</div>
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li >
+                        <div class="brick-list-item-1">新品</div>
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li >
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li >
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li >
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="../images/p1.jpg"/></a>
+                        <h3>小米空气净化器2</h3>
+                        <p class="desc">10分钟，空气焕然一新</p>
+                        <p class="price">299元</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
